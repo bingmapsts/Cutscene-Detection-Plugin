@@ -1,4 +1,4 @@
-The plugin disables ObjectHook and sets Aim to Head during a cutscene.
+The plugin disables ObjectHook and sets Aim to Game during a cutscene.
 
 
 How to use:
