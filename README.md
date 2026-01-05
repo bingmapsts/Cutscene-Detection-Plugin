@@ -6,6 +6,7 @@ Download & copy CutsceneDetectionPlugin.dll file to
 ```
 %AppData%\UnrealVRMod\{GAME_EXE_NAME}\plugins
 ```
+{GAME_EXE_NAME} is a name of an executable file of a game.
 
 The video proof:
 https://www.youtube.com/watch?v=4ryPbnoErYg
