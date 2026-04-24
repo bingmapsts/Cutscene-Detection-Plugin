@@ -31,4 +31,4 @@ uevr.params.vr.set_decoupled_pitch_enabled(true)
 
 The video proof:  
 https://www.youtube.com/watch?v=4ryPbnoErYg  
-_recorder with old version in dll file_
+_recorded with the old version in dll file_
