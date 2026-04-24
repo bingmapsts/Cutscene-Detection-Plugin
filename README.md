@@ -30,5 +30,5 @@ uevr.params.vr.set_decoupled_pitch_enabled(true)
 {GAME_EXE_NAME} is a name of an executable file of a game.
 
 The video proof:
-https://www.youtube.com/watch?v=4ryPbnoErYg
+https://www.youtube.com/watch?v=4ryPbnoErYg  
 _recorder with old version in dll file_
