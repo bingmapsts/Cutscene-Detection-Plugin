@@ -3,13 +3,15 @@ The plugin/script does the following during a cutscene:
 2) Sets Aim to Game
 3) Disables decoupled pitch
 
+The plugin/script sets Aim to Game when a menu is opened. Menu flags need to be setuped for each game separetly in CutsceneAndMenuDetection.json file.  
+
 
 How to use:
 1) Download & copy CutsceneDetection.lua file to
 ```
 %AppData%\UnrealVRMod\{GAME_EXE_NAME}\scripts
 ```
-2) If the data folder contains a folder with name of a game then download & copy CutsceneDetection.json to
+2) If the data folder contains a folder with name of a game then download & copy CutsceneAndMenuDetection.json to
 ```
 %AppData%\UnrealVRMod\{GAME_EXE_NAME}\data
 ```
