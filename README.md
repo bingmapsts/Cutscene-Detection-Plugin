@@ -24,7 +24,16 @@ shouldRotateInMenu = false
 It only happens if there is CutsceneDetection.json file for a game.
 5) You can remove manipulation with decoupled pitch by removing the following lines:  
 uevr.params.vr.set_decoupled_pitch_enabled(false)  
-uevr.params.vr.set_decoupled_pitch_enabled(true)  
+uevr.params.vr.set_decoupled_pitch_enabled(true)
+6) You can change the aiming method by changing
+aimMethod = 1
+to any value:
+GAME = 0
+HEAD = 1
+RIGHT_CONTROLLER = 2
+LEFT_CONTROLLER = 3
+TWO_HANDED_RIGHT = 4
+TWO_HANDED_LEFT = 5  
 
 
 {GAME_EXE_NAME} is a name of an executable file of a game.
