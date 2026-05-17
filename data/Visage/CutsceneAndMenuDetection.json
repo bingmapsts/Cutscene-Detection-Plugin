@@ -1,0 +1,9 @@
+{
+	"menu": {
+		"playerController": {
+			"AcknowledgedPawn": [
+				"ControllingUI"
+			]
+		}
+	}
+}
