@@ -7,7 +7,7 @@ The plugin/script sets Aim to Game when a menu is opened. Menu flags need to be 
 
 
 How to use:
-1) Download & copy CutsceneDetection.lua file to
+1) Download & copy CutsceneAndMenuDetection.lua file to
 ```
 %AppData%\UnrealVRMod\{GAME_EXE_NAME}\scripts
 ```
