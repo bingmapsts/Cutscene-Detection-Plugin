@@ -8,6 +8,7 @@ local lastPitch = nil
 local isRotationOffsetSet = false
 local rotationOffset = UEVR_Vector3f.new()
 local settings = json.load_file('CutsceneAndMenuDetection.json') or {}
+settings.menu = settings.menu or {}
 
 uevr.sdk.callbacks.on_pre_engine_tick(function(engine, delta)
 	timeLeft = timeLeft - delta
@@ -77,7 +78,11 @@ function isAnyPropertyTrue(object, dictionary)
 end
 
 function isMenuOpened(playerController)
-	return settings.menu and settings.menu.playerController and isAnyPropertyTrue(playerController, settings.menu.playerController)
+	if settings.menu.playerController then
+		return isAnyPropertyTrue(playerController, settings.menu.playerController)
+	end
+
+	return playerController.bShowMouseCursor
 end
 
 function handleCutscene(isInCutscene, isInMenu, playerController)
