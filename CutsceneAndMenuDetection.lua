@@ -49,8 +49,15 @@ function isCutsceneCamera(playerController)
 	    playerController.PlayerCameraManager.ViewTarget and
 	    playerController.PlayerCameraManager.ViewTarget.Target then
 			local className = tostring(playerController.PlayerCameraManager.ViewTarget.Target:get_class():get_fname())
-			return string.find(className, 'CameraActor') or string.find(className, 'CineCam')
+
+			if string.find(className, 'CameraActor') or string.find(className, 'CineCam') then
+				return true
+			end
    end
+
+	if settings.cutscene and settings.cutscene.playerController then
+		return isAnyPropertyTrue(playerController, settings.cutscene.playerController)
+	end
 
    return false
 end
