@@ -3,14 +3,21 @@
 		"forcePitchToZero": true,
 		"playerController": {
 			"properties": [
-				"_IsInCutscene",
 				"_IsInDialog",
 				"_IsInvestigatingObject",
 				"bEnableClickEvents"
 			],
-			"AcknowledgedPawn": [
-				"_HandRaised"
-			]
+			"AcknowledgedPawn": [ "_HandRaised" ]
+		}
+	},
+	"cutscene": {
+		"playerController": {
+			"properties": [ "_IsInCutscene" ],
+			"PlayerCameraManager": {
+				"ViewTarget": {
+					"Target": [ "_BlockMove" ]
+				}
+			}
 		}
 	}
 }
