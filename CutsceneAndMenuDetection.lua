@@ -29,8 +29,12 @@ uevr.sdk.callbacks.on_pre_engine_tick(function(engine, delta)
 		return
 	end
 
+	local isInMenu = false
 	local isInCutscene = isCutsceneCamera(playerController)
-	local isInMenu = isMenuOpened(playerController)
+
+	if not isInCutscene then
+		isInMenu = isMenuOpened(playerController)
+	end
 
 	handleCutscene(isInCutscene or isInMenu, isInMenu, playerController)
 end)
