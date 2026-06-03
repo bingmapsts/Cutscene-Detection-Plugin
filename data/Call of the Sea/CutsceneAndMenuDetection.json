@@ -1,0 +1,10 @@
+{
+	"cutscene": {
+		"playerController": {
+			"properties": [ "bShowMouseCursor" ],
+			"AcknowledgedPawn": [
+				"bHasRestrictedView_"
+			]
+		}
+	}
+}
