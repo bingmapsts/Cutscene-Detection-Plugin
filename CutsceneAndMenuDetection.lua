@@ -3,6 +3,7 @@ local timeLeft = interval
 local shouldRotateInMenu = true
 local aimMethod = 1
 local oldIsInCutscene = false
+local oldIsInMenu = false
 local pitchSetCounter = 0
 local lastPitch = nil
 local isRotationOffsetSet = false
@@ -36,7 +37,7 @@ uevr.sdk.callbacks.on_pre_engine_tick(function(engine, delta)
 		isInMenu = isMenuOpened(playerController)
 	end
 
-	handleCutscene(isInCutscene or isInMenu, isInMenu, playerController)
+	handleCutscene(isInCutscene, isInMenu, playerController)
 end)
 
 uevr.sdk.callbacks.on_xinput_get_state(function(retval, user_index, state)
@@ -97,7 +98,7 @@ function isMenuOpened(playerController)
 end
 
 function handleCutscene(isInCutscene, isInMenu, playerController)
-	if oldIsInCutscene == isInCutscene then
+	if oldIsInCutscene == isInCutscene and oldIsInMenu == isInMenu  then
 		if isInMenu and settings.menu.forcePitchToZero and pitchSetCounter < 2 then
 			setPitch(playerController)
 		end
@@ -105,9 +106,10 @@ function handleCutscene(isInCutscene, isInMenu, playerController)
 		return
 	end
 
+	oldIsInMenu = isInMenu
 	oldIsInCutscene = isInCutscene
 
-	if isInCutscene then
+	if isInCutscene or isInMenu then
 		if not isInMenu then
 			UEVR_UObjectHook.set_disabled(true)
 			uevr.params.vr.set_decoupled_pitch_enabled(false)
