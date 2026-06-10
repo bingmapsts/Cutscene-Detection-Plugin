@@ -23,7 +23,7 @@ You can change this combination in on_xinput_get_state. All buttons are here: ht
 shouldRotateInMenu = true  
 to  
 shouldRotateInMenu = false  
-It only happens if there is CutsceneDetection.json file for a game.
+It only happens if there is CutsceneAndMenuDetection.json file for a game.
 5) You can remove manipulation with decoupled pitch by removing the following lines:  
 uevr.params.vr.set_decoupled_pitch_enabled(false)  
 uevr.params.vr.set_decoupled_pitch_enabled(true)
